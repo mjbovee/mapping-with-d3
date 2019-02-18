@@ -23,3 +23,13 @@ neighborhoods.selectAll('path')
     .append('path')
     .attr('fill', '#ccc')
     .attr('d', geoPath)
+
+var rodents = svg.append('g')
+
+rodents.selectAll('path')
+    .data(rodents_json.features)
+    .enter()
+    .append('path')
+    .attr('fill', '#900')
+    .attr('stroke', '#999')
+    .attr('d', geoPath)
